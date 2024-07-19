@@ -1,16 +1,16 @@
 #pragma once
 
-#include "point.hpp"
-#include <glm/vec3.hpp>
-
-using glm::vec3;
+#include "vec3.hpp"
 
 class ray {
+public:
   ray(const point3 &origin, const vec3 &direction)
       : orig(origin), dir(direction) {}
 
   const point3 &origin() const { return orig; }
   const vec3 &direction() const { return dir; }
+
+  point3 at(float t) const { return orig + (t * dir); }
 
 private:
   point3 orig;
