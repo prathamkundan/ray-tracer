@@ -1,0 +1,1143 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 11.08      1.42     1.42 53043080     0.00     0.00  sphere::hit(ray const&, interval, hit_record&) const
+ 10.49      2.75     1.34 313714126     0.00     0.00  vec3::vec3(double, double, double)
+  7.60      3.73     0.97 26521540     0.00     0.00  hittable_list::hit(ray const&, interval, hit_record&) const
+  6.73      4.58     0.86 177415857     0.00     0.00  dot(vec3 const&, vec3 const&)
+  4.54      5.17     0.58 62808159     0.00     0.00  operator+(vec3 const&, vec3 const&)
+  4.07      5.68     0.52 116054410     0.00     0.00  operator*(double, vec3 const&)
+  3.84      6.17     0.49  9000000     0.00     0.00  camera::ray_color(ray const&, hittable const&, int)
+  3.68      6.64     0.47 80329700     0.00     0.00  operator-(vec3 const&, vec3 const&)
+  3.60      7.11     0.46 79564620     0.00     0.00  bool __gnu_cxx::operator!=<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&, __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&)
+  3.56      7.56     0.46 106176164     0.00     0.00  vec3::vec3()
+  3.41      8.00     0.43 44808161     0.00     0.00  operator/(vec3 const&, double)
+  3.05      8.38     0.39 185853948     0.00     0.00  ray::direction() const
+  2.43      8.70     0.31 159129240     0.00     0.00  __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::base() const
+  2.19      8.97     0.28                             _init
+  2.00      9.23     0.26 72250347     0.00     0.00  random_double()
+  1.96      9.48     0.25 56200208     0.00     0.00  interval::surrounds(double) const
+  1.80      9.71     0.23 79564623     0.00     0.00  interval::interval(double, double)
+  1.80      9.94     0.23 27083449     0.00     0.00  ray::ray(vec3 const&, vec3 const&)
+  1.68     10.15     0.21 53043080     0.00     0.00  hit_record::hit_record()
+  1.64     10.37     0.21 53043080     0.00     0.00  __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::operator++()
+  1.57     10.56     0.20 26521540     0.00     0.00  unit_vector(vec3 const&)
+  1.33     10.73     0.17 18286617     0.00     0.00  hit_record::set_face_normal(ray const&, vec3 const&)
+  1.29     10.90     0.17 53043080     0.00     0.00  __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::__normal_iterator(std::shared_ptr<hittable> const* const&)
+  1.21     11.05     0.15  9000000     0.00     0.00  camera::get_ray(int, int)
+  1.17     11.21     0.15 53043080     0.00     0.00  __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::operator*() const
+  1.14     11.35     0.14 18083449     0.00     0.00  random_unit_vector()
+  1.10     11.49     0.14 53043080     0.00     0.00  ray::origin() const
+  0.98     11.62     0.12 53043080     0.00     0.00  std::__shared_ptr_access<hittable, (__gnu_cxx::_Lock_policy)2, false, false>::_M_get() const
+  0.98     11.74     0.12 26521540     0.00     0.00  std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::begin() const
+  0.94     11.86     0.12 18286617     0.00     0.00  ray::at(float) const
+  0.78     11.96     0.10 26521540     0.00     0.00  vec3::length_squared() const
+  0.70     12.05     0.09 53043080     0.00     0.00  std::__shared_ptr_access<hittable, (__gnu_cxx::_Lock_policy)2, false, false>::operator->() const
+  0.70     12.14     0.09 18083449     0.00     0.00  vec3::random()
+  0.67     12.22     0.09 26521540     0.00     0.00  std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::end() const
+  0.63     12.30     0.08 53043080     0.00     0.00  std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::get() const
+  0.59     12.38     0.07 26521540     0.00     0.00  vec3::length() const
+  0.51     12.45     0.07        1     0.07    12.37  camera::render(hittable const&)
+  0.47     12.51     0.06  9000000     0.00     0.00  vec3::operator+=(vec3 const&)
+  0.35     12.55     0.04 17528091     0.00     0.00  vec3::y() const
+  0.35     12.60     0.04                             main
+  0.31     12.63     0.04       14     0.00     0.00  vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&)
+  0.27     12.67     0.04    90000     0.00     0.00  vec3::operator*=(double)
+  0.23     12.70     0.03 10000311     0.00     0.00  vec3::operator-() const
+  0.23     12.73     0.03  9090000     0.00     0.00  vec3::x() const
+  0.16     12.75     0.02        2     0.01     0.01  void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&)
+  0.08     12.76     0.01                             frame_dummy
+  0.04     12.77     0.01    90000     0.00     0.00  vec3::z() const
+  0.04     12.77     0.01        1     0.01     0.01  hittable_list::~hittable_list()
+  0.00     12.77     0.00   270000     0.00     0.00  interval::clamp(double) const
+  0.00     12.77     0.00    90000     0.00     0.00  write_color(std::ostream&, vec3 const&)
+  0.00     12.77     0.00       12     0.00     0.00  std::shared_ptr<hittable>* std::__niter_base<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*)
+  0.00     12.77     0.00        8     0.00     0.00  __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::base() const
+  0.00     12.77     0.00        8     0.00     0.00  std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::size() const
+  0.00     12.77     0.00        7     0.00     0.00  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
+  0.00     12.77     0.00        7     0.00     0.00  double&& std::forward<double>(std::remove_reference<double>::type&)
+  0.00     12.77     0.00        7     0.00     0.00  int&& std::forward<int>(std::remove_reference<int>::type&)
+  0.00     12.77     0.00        7     0.00     0.00  operator new(unsigned long, void*)
+  0.00     12.77     0.00        6     0.00     0.00  __gnu_cxx::__aligned_buffer<sphere>::_M_ptr()
+  0.00     12.77     0.00        6     0.00     0.00  __gnu_cxx::__aligned_buffer<sphere>::_M_addr()
+  0.00     12.77     0.00        6     0.00     0.00  std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_ptr()
+  0.00     12.77     0.00        6     0.00     0.00  std::shared_ptr<hittable> const& std::forward<std::shared_ptr<hittable> const&>(std::remove_reference<std::shared_ptr<hittable> const&>::type&)
+  0.00     12.77     0.00        5     0.00     0.00  std::shared_ptr<hittable>::~shared_ptr()
+  0.00     12.77     0.00        5     0.00     0.00  std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_get_Tp_allocator()
+  0.00     12.77     0.00        5     0.00     0.00  std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr()
+  0.00     12.77     0.00        5     0.00     0.00  std::shared_ptr<hittable>* std::__addressof<std::shared_ptr<hittable> >(std::shared_ptr<hittable>&)
+  0.00     12.77     0.00        4     0.00     0.00  __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::__normal_iterator(std::shared_ptr<hittable>* const&)
+  0.00     12.77     0.00        4     0.00     0.00  std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_get_Tp_allocator() const
+  0.00     12.77     0.00        4     0.00     0.00  std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::max_size() const
+  0.00     12.77     0.00        4     0.00     0.00  std::_Sp_ebo_helper<0, std::allocator<void>, true>::_S_get(std::_Sp_ebo_helper<0, std::allocator<void>, true>&)
+  0.00     12.77     0.00        4     0.00     0.00  std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&, std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*)
+  0.00     12.77     0.00        4     0.00     0.00  std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::~__allocated_ptr()
+  0.00     12.77     0.00        4     0.00     0.00  std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::~__new_allocator()
+  0.00     12.77     0.00        4     0.00     0.00  std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
+  0.00     12.77     0.00        4     0.00     0.00  std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Impl::_M_alloc()
+  0.00     12.77     0.00        4     0.00     0.00  std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_S_max_size(std::allocator<std::shared_ptr<hittable> > const&)
+  0.00     12.77     0.00        4     0.00     0.00  std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_S_relocate(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&)
+  0.00     12.77     0.00        4     0.00     0.00  std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >* std::__addressof<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&)
+  0.00     12.77     0.00        4     0.00     0.00  std::shared_ptr<hittable>* std::__relocate_a<std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&)
+  0.00     12.77     0.00        4     0.00     0.00  std::shared_ptr<hittable>* std::__relocate_a_1<std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&)
+  0.00     12.77     0.00        4     0.00     0.00  unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00     12.77     0.00        3     0.00     0.00  hittable::hittable()
+  0.00     12.77     0.00        3     0.00     0.00  hittable::~hittable()
+  0.00     12.77     0.00        3     0.00     0.00  std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_deallocate(std::shared_ptr<hittable>*, unsigned long)
+  0.00     12.77     0.00        3     0.00     0.00  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_swap(std::__shared_count<(__gnu_cxx::_Lock_policy)2>&)
+  0.00     12.77     0.00        3     0.00     0.00  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count()
+  0.00     12.77     0.00        2     0.00     0.01  hittable_list::add(std::shared_ptr<hittable>)
+  0.00     12.77     0.00        2     0.00     0.00  sphere::sphere(vec3 const&, double)
+  0.00     12.77     0.00        2     0.00     0.00  sphere::~sphere()
+  0.00     12.77     0.00        2     0.00     0.00  __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::difference_type __gnu_cxx::operator-<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&, __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&)
+  0.00     12.77     0.00        2     0.00     0.00  std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_check_len(unsigned long, char const*) const
+  0.00     12.77     0.00        2     0.00     0.00  std::shared_ptr<sphere>::~shared_ptr()
+  0.00     12.77     0.00        2     0.00     0.00  std::shared_ptr<hittable>::shared_ptr<sphere, void>(std::shared_ptr<sphere>&&)
+  0.00     12.77     0.00        2     0.00     0.00  std::shared_ptr<hittable>::shared_ptr(std::shared_ptr<hittable> const&)
+  0.00     12.77     0.00        2     0.00     0.00  std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_allocate(unsigned long)
+  0.00     12.77     0.00        2     0.00     0.00  std::enable_if<!std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__has_esft_base<sphere, void>::value, void>::type std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::_M_enable_shared_from_this_with<sphere, sphere>(sphere*)
+  0.00     12.77     0.00        2     0.00     0.00  std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr()
+  0.00     12.77     0.00        2     0.00     0.00  std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2> const&)
+  0.00     12.77     0.00        2     0.00     0.00  std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<sphere, void>(std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>&&)
+  0.00     12.77     0.00        2     0.00     0.00  std::_Sp_ebo_helper<0, std::allocator<void>, true>::_Sp_ebo_helper(std::allocator<void> const&)
+  0.00     12.77     0.00        2     0.00     0.00  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
+  0.00     12.77     0.00        2     0.00     0.00  std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::get()
+  0.00     12.77     0.00        2     0.00     0.00  std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::operator=(decltype(nullptr))
+  0.00     12.77     0.00        2     0.00     0.00  std::__new_allocator<std::shared_ptr<hittable> >::deallocate(std::shared_ptr<hittable>*, unsigned long)
+  0.00     12.77     0.00        2     0.00     0.00  std::__new_allocator<std::shared_ptr<hittable> >::allocate(unsigned long, void const*)
+  0.00     12.77     0.00        2     0.00     0.00  std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::deallocate(std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*, unsigned long)
+  0.00     12.77     0.00        2     0.00     0.00  std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::allocate(unsigned long, void const*)
+  0.00     12.77     0.00        2     0.00     0.00  std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_add_ref_copy()
+  0.00     12.77     0.00        2     0.00     0.00  std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_Sp_counted_base()
+  0.00     12.77     0.00        2     0.00     0.00  std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::~_Sp_counted_base()
+  0.00     12.77     0.00        2     0.00     0.00  std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
+  0.00     12.77     0.00        2     0.00     0.00  std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+  0.00     12.77     0.00        2     0.00     0.00  std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Impl::_Impl(std::allocator<void>)
+  0.00     12.77     0.00        2     0.00     0.00  std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace()
+  0.00     12.77     0.00        2     0.00     0.00  std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::end()
+  0.00     12.77     0.00        2     0.00     0.00  std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::begin()
+  0.00     12.77     0.00        2     0.00     0.01  std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::push_back(std::shared_ptr<hittable> const&)
+  0.00     12.77     0.00        2     0.00     0.00  std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>* std::__to_address<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >(std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*)
+  0.00     12.77     0.00        2     0.00     0.00  std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&)
+  0.00     12.77     0.00        2     0.00     0.00  unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00     12.77     0.00        2     0.00     0.00  std::remove_reference<std::shared_ptr<sphere>&>::type&& std::move<std::shared_ptr<sphere>&>(std::shared_ptr<sphere>&)
+  0.00     12.77     0.00        2     0.00     0.00  std::remove_reference<std::shared_ptr<hittable>&>::type&& std::move<std::shared_ptr<hittable>&>(std::shared_ptr<hittable>&)
+  0.00     12.77     0.00        2     0.00     0.00  std::shared_ptr<hittable>&& std::forward<std::shared_ptr<hittable> >(std::remove_reference<std::shared_ptr<hittable> >::type&)
+  0.00     12.77     0.00        2     0.00     0.00  void std::_Destroy<sphere>(sphere*)
+  0.00     12.77     0.00        2     0.00     0.00  void std::_Destroy<std::shared_ptr<hittable> >(std::shared_ptr<hittable>*)
+  0.00     12.77     0.00        1     0.00     0.00  __static_initialization_and_destruction_0()
+  0.00     12.77     0.00        1     0.00     0.00  __static_initialization_and_destruction_0()
+  0.00     12.77     0.00        1     0.00     0.00  hittable_list::hittable_list()
+  0.00     12.77     0.00        1     0.00     0.00  camera::initialize()
+  0.00     12.77     0.00        1     0.00     0.00  camera::camera()
+  0.00     12.77     0.00        1     0.00     0.02  std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&)
+  0.00     12.77     0.00        1     0.00     0.02  std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&)
+  0.00     12.77     0.00        1     0.00     0.00  std::shared_ptr<hittable>::shared_ptr(std::shared_ptr<hittable>&&)
+  0.00     12.77     0.00        1     0.00     0.00  void std::_Destroy_aux<false>::__destroy<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*)
+  0.00     12.77     0.00        1     0.00     0.00  std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl::_Vector_impl()
+  0.00     12.77     0.00        1     0.00     0.00  std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl::~_Vector_impl()
+  0.00     12.77     0.00        1     0.00     0.00  std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl_data::_Vector_impl_data()
+  0.00     12.77     0.00        1     0.00     0.00  std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_base()
+  0.00     12.77     0.00        1     0.00     0.00  std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::~_Vector_base()
+  0.00     12.77     0.00        1     0.00     0.01  std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&)
+  0.00     12.77     0.00        1     0.00     0.01  std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&)
+  0.00     12.77     0.00        1     0.00     0.00  std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>&&)
+  0.00     12.77     0.00        1     0.00     0.01  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&)
+  0.00     12.77     0.00        1     0.00     0.01  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&)
+  0.00     12.77     0.00        1     0.00     0.00  std::__new_allocator<std::shared_ptr<hittable> >::~__new_allocator()
+  0.00     12.77     0.00        1     0.00     0.01  std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, double>(std::allocator<void>, vec3&&, double&&)
+  0.00     12.77     0.00        1     0.00     0.01  std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, int>(std::allocator<void>, vec3&&, int&&)
+  0.00     12.77     0.00        1     0.00     0.00  std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::vector()
+  0.00     12.77     0.00        1     0.00     0.00  std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::~vector()
+  0.00     12.77     0.00        1     0.00     0.00  void std::_Construct<sphere, vec3, double>(sphere*, vec3&&, double&&)
+  0.00     12.77     0.00        1     0.00     0.00  void std::_Construct<sphere, vec3, int>(sphere*, vec3&&, int&&)
+  0.00     12.77     0.00        1     0.00     0.02  std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, double>(vec3&&, double&&)
+  0.00     12.77     0.00        1     0.00     0.02  std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, int>(vec3&&, int&&)
+  0.00     12.77     0.00        1     0.00     0.00  void std::__relocate_object_a<std::shared_ptr<hittable>, std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&)
+  0.00     12.77     0.00        1     0.00     0.00  void std::_Destroy<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.08% of 12.77 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     97.7    0.04   12.43                 main [1]
+                0.07   12.30       1/1           camera::render(hittable const&) [2]
+                0.00    0.02       2/2           hittable_list::add(std::shared_ptr<hittable>) [45]
+                0.00    0.02       1/1           std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, double>(vec3&&, double&&) [48]
+                0.00    0.02       1/1           std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, int>(vec3&&, int&&) [49]
+                0.01    0.00       1/1           hittable_list::~hittable_list() [61]
+                0.00    0.00       1/1           camera::camera() [65]
+                0.00    0.00       2/313714126     vec3::vec3(double, double, double) [6]
+                0.00    0.00       2/2           std::shared_ptr<hittable>::shared_ptr<sphere, void>(std::shared_ptr<sphere>&&) [114]
+                0.00    0.00       2/5           std::shared_ptr<hittable>::~shared_ptr() [85]
+                0.00    0.00       2/2           std::shared_ptr<sphere>::~shared_ptr() [113]
+                0.00    0.00       1/1           hittable_list::hittable_list() [147]
+-----------------------------------------------
+                0.07   12.30       1/1           main [1]
+[2]     96.9    0.07   12.30       1         camera::render(hittable const&) [2]
+                0.49   10.84 9000000/9000000     camera::ray_color(ray const&, hittable const&, int) [3]
+                0.15    0.72 9000000/9000000     camera::get_ray(int, int) [9]
+                0.06    0.00 9000000/9000000     vec3::operator+=(vec3 const&) [40]
+                0.04    0.00   90000/90000       vec3::operator*=(double) [43]
+                0.00    0.01   90000/90000       write_color(std::ostream&, vec3 const&) [59]
+                0.00    0.00   90000/106176164     vec3::vec3() [18]
+                0.00    0.00       1/1           camera::initialize() [64]
+-----------------------------------------------
+                             18083449             camera::ray_color(ray const&, hittable const&, int) [3]
+                0.49   10.84 9000000/9000000     camera::render(hittable const&) [2]
+[3]     88.7    0.49   10.84 9000000+18083449 camera::ray_color(ray const&, hittable const&, int) [3]
+                0.97    7.15 26521540/26521540     hittable_list::hit(ray const&, interval, hit_record&) const [4]
+                0.14    0.95 18083449/18083449     random_unit_vector() [7]
+                0.24    0.11 26521540/62808159     operator+(vec3 const&, vec3 const&) [12]
+                0.11    0.23 26521540/53043080     hit_record::hit_record() [16]
+                0.16    0.15 34959631/116054410     operator*(double, vec3 const&) [8]
+                0.06    0.21 8438091/26521540     unit_vector(vec3 const&) [10]
+                0.15    0.00 18083449/27083449     ray::ray(vec3 const&, vec3 const&) [28]
+                0.08    0.00 26521540/79564623     interval::interval(double, double) [27]
+                0.07    0.00 17438091/313714126     vec3::vec3(double, double, double) [6]
+                0.02    0.00 8438091/17528091     vec3::y() const [41]
+                0.02    0.00 8438091/185853948     ray::direction() const [19]
+                             18083449             camera::ray_color(ray const&, hittable const&, int) [3]
+-----------------------------------------------
+                0.97    7.15 26521540/26521540     camera::ray_color(ray const&, hittable const&, int) [3]
+[4]     63.6    0.97    7.15 26521540         hittable_list::hit(ray const&, interval, hit_record&) const [4]
+                1.42    3.45 53043080/53043080     sphere::hit(ray const&, interval, hit_record&) const [5]
+                0.46    0.31 79564620/79564620     bool __gnu_cxx::operator!=<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&, __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&) [15]
+                0.11    0.23 26521540/53043080     hit_record::hit_record() [16]
+                0.09    0.20 53043080/53043080     std::__shared_ptr_access<hittable, (__gnu_cxx::_Lock_policy)2, false, false>::operator->() const [23]
+                0.21    0.00 53043080/53043080     __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::operator++() [29]
+                0.12    0.08 26521540/26521540     std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::begin() const [30]
+                0.09    0.08 26521540/26521540     std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::end() const [33]
+                0.15    0.00 53043080/79564623     interval::interval(double, double) [27]
+                0.15    0.00 53043080/53043080     __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::operator*() const [35]
+-----------------------------------------------
+                1.42    3.45 53043080/53043080     hittable_list::hit(ray const&, interval, hit_record&) const [4]
+[5]     38.1    1.42    3.45 53043080         sphere::hit(ray const&, interval, hit_record&) const [5]
+                0.77    0.00 159129240/177415857     dot(vec3 const&, vec3 const&) [11]
+                0.42    0.30 71329697/80329700     operator-(vec3 const&, vec3 const&) [14]
+                0.12    0.41 18286617/18286617     ray::at(float) const [17]
+                0.17    0.20 18286617/18286617     hit_record::set_face_normal(ray const&, vec3 const&) [20]
+                0.18    0.16 18286617/44808161     operator/(vec3 const&, double) [13]
+                0.33    0.00 159129240/185853948     ray::direction() const [19]
+                0.25    0.00 56200208/56200208     interval::surrounds(double) const [26]
+                0.14    0.00 53043080/53043080     ray::origin() const [36]
+-----------------------------------------------
+                0.00    0.00       2/313714126     main [1]
+                0.00    0.00       4/313714126     camera::initialize() [64]
+                0.04    0.00 9000000/313714126     camera::get_ray(int, int) [9]
+                0.04    0.00 10000311/313714126     vec3::operator-() const [39]
+                0.07    0.00 17438091/313714126     camera::ray_color(ray const&, hittable const&, int) [3]
+                0.08    0.00 18083449/313714126     vec3::random() [21]
+                0.27    0.00 62808159/313714126     operator+(vec3 const&, vec3 const&) [12]
+                0.34    0.00 80329700/313714126     operator-(vec3 const&, vec3 const&) [14]
+                0.50    0.00 116054410/313714126     operator*(double, vec3 const&) [8]
+[6]     10.5    1.34    0.00 313714126         vec3::vec3(double, double, double) [6]
+-----------------------------------------------
+                0.14    0.95 18083449/18083449     camera::ray_color(ray const&, hittable const&, int) [3]
+[7]      8.6    0.14    0.95 18083449         random_unit_vector() [7]
+                0.14    0.45 18083449/26521540     unit_vector(vec3 const&) [10]
+                0.09    0.27 18083449/18083449     vec3::random() [21]
+-----------------------------------------------
+                0.00    0.00       1/116054410     camera::initialize() [64]
+                0.08    0.08 18000000/116054410     camera::get_ray(int, int) [9]
+                0.08    0.08 18286617/116054410     ray::at(float) const [17]
+                0.16    0.15 34959631/116054410     camera::ray_color(ray const&, hittable const&, int) [3]
+                0.20    0.19 44808161/116054410     operator/(vec3 const&, double) [13]
+[8]      8.0    0.52    0.50 116054410         operator*(double, vec3 const&) [8]
+                0.50    0.00 116054410/313714126     vec3::vec3(double, double, double) [6]
+-----------------------------------------------
+                0.15    0.72 9000000/9000000     camera::render(hittable const&) [2]
+[9]      6.9    0.15    0.72 9000000         camera::get_ray(int, int) [9]
+                0.17    0.08 18000000/62808159     operator+(vec3 const&, vec3 const&) [12]
+                0.08    0.08 18000000/116054410     operator*(double, vec3 const&) [8]
+                0.05    0.04 9000000/80329700     operator-(vec3 const&, vec3 const&) [14]
+                0.08    0.00 9000000/27083449     ray::ray(vec3 const&, vec3 const&) [28]
+                0.06    0.00 18000000/72250347     random_double() [25]
+                0.04    0.00 9000000/313714126     vec3::vec3(double, double, double) [6]
+                0.03    0.00 9000000/9090000     vec3::x() const [44]
+                0.02    0.00 9000000/17528091     vec3::y() const [41]
+-----------------------------------------------
+                0.06    0.21 8438091/26521540     camera::ray_color(ray const&, hittable const&, int) [3]
+                0.14    0.45 18083449/26521540     random_unit_vector() [7]
+[10]     6.8    0.20    0.66 26521540         unit_vector(vec3 const&) [10]
+                0.26    0.23 26521540/44808161     operator/(vec3 const&, double) [13]
+                0.07    0.10 26521540/26521540     vec3::length() const [32]
+-----------------------------------------------
+                0.09    0.00 18286617/177415857     hit_record::set_face_normal(ray const&, vec3 const&) [20]
+                0.77    0.00 159129240/177415857     sphere::hit(ray const&, interval, hit_record&) const [5]
+[11]     6.7    0.86    0.00 177415857         dot(vec3 const&, vec3 const&) [11]
+-----------------------------------------------
+                0.00    0.00       2/62808159     camera::initialize() [64]
+                0.17    0.08 18000000/62808159     camera::get_ray(int, int) [9]
+                0.17    0.08 18286617/62808159     ray::at(float) const [17]
+                0.24    0.11 26521540/62808159     camera::ray_color(ray const&, hittable const&, int) [3]
+[12]     6.6    0.58    0.27 62808159         operator+(vec3 const&, vec3 const&) [12]
+                0.27    0.00 62808159/313714126     vec3::vec3(double, double, double) [6]
+-----------------------------------------------
+                0.00    0.00       4/44808161     camera::initialize() [64]
+                0.18    0.16 18286617/44808161     sphere::hit(ray const&, interval, hit_record&) const [5]
+                0.26    0.23 26521540/44808161     unit_vector(vec3 const&) [10]
+[13]     6.5    0.43    0.39 44808161         operator/(vec3 const&, double) [13]
+                0.20    0.19 44808161/116054410     operator*(double, vec3 const&) [8]
+-----------------------------------------------
+                0.00    0.00       3/80329700     camera::initialize() [64]
+                0.05    0.04 9000000/80329700     camera::get_ray(int, int) [9]
+                0.42    0.30 71329697/80329700     sphere::hit(ray const&, interval, hit_record&) const [5]
+[14]     6.4    0.47    0.34 80329700         operator-(vec3 const&, vec3 const&) [14]
+                0.34    0.00 80329700/313714126     vec3::vec3(double, double, double) [6]
+-----------------------------------------------
+                0.46    0.31 79564620/79564620     hittable_list::hit(ray const&, interval, hit_record&) const [4]
+[15]     6.0    0.46    0.31 79564620         bool __gnu_cxx::operator!=<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&, __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&) [15]
+                0.31    0.00 159129240/159129240     __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::base() const [22]
+-----------------------------------------------
+                0.11    0.23 26521540/53043080     camera::ray_color(ray const&, hittable const&, int) [3]
+                0.11    0.23 26521540/53043080     hittable_list::hit(ray const&, interval, hit_record&) const [4]
+[16]     5.2    0.21    0.45 53043080         hit_record::hit_record() [16]
+                0.45    0.00 106086160/106176164     vec3::vec3() [18]
+-----------------------------------------------
+                0.12    0.41 18286617/18286617     sphere::hit(ray const&, interval, hit_record&) const [5]
+[17]     4.1    0.12    0.41 18286617         ray::at(float) const [17]
+                0.17    0.08 18286617/62808159     operator+(vec3 const&, vec3 const&) [12]
+                0.08    0.08 18286617/116054410     operator*(double, vec3 const&) [8]
+-----------------------------------------------
+                0.00    0.00       4/106176164     camera::camera() [65]
+                0.00    0.00   90000/106176164     camera::render(hittable const&) [2]
+                0.45    0.00 106086160/106176164     hit_record::hit_record() [16]
+[18]     3.6    0.46    0.00 106176164         vec3::vec3() [18]
+-----------------------------------------------
+                0.02    0.00 8438091/185853948     camera::ray_color(ray const&, hittable const&, int) [3]
+                0.04    0.00 18286617/185853948     hit_record::set_face_normal(ray const&, vec3 const&) [20]
+                0.33    0.00 159129240/185853948     sphere::hit(ray const&, interval, hit_record&) const [5]
+[19]     3.1    0.39    0.00 185853948         ray::direction() const [19]
+-----------------------------------------------
+                0.17    0.20 18286617/18286617     sphere::hit(ray const&, interval, hit_record&) const [5]
+[20]     2.9    0.17    0.20 18286617         hit_record::set_face_normal(ray const&, vec3 const&) [20]
+                0.09    0.00 18286617/177415857     dot(vec3 const&, vec3 const&) [11]
+                0.03    0.04 10000311/10000311     vec3::operator-() const [39]
+                0.04    0.00 18286617/185853948     ray::direction() const [19]
+-----------------------------------------------
+                0.09    0.27 18083449/18083449     random_unit_vector() [7]
+[21]     2.8    0.09    0.27 18083449         vec3::random() [21]
+                0.19    0.00 54250347/72250347     random_double() [25]
+                0.08    0.00 18083449/313714126     vec3::vec3(double, double, double) [6]
+-----------------------------------------------
+                0.31    0.00 159129240/159129240     bool __gnu_cxx::operator!=<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&, __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&) [15]
+[22]     2.4    0.31    0.00 159129240         __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::base() const [22]
+-----------------------------------------------
+                0.09    0.20 53043080/53043080     hittable_list::hit(ray const&, interval, hit_record&) const [4]
+[23]     2.3    0.09    0.20 53043080         std::__shared_ptr_access<hittable, (__gnu_cxx::_Lock_policy)2, false, false>::operator->() const [23]
+                0.12    0.08 53043080/53043080     std::__shared_ptr_access<hittable, (__gnu_cxx::_Lock_policy)2, false, false>::_M_get() const [31]
+-----------------------------------------------
+                                                 <spontaneous>
+[24]     2.2    0.28    0.00                 _init [24]
+-----------------------------------------------
+                0.06    0.00 18000000/72250347     camera::get_ray(int, int) [9]
+                0.19    0.00 54250347/72250347     vec3::random() [21]
+[25]     2.0    0.26    0.00 72250347         random_double() [25]
+-----------------------------------------------
+                0.25    0.00 56200208/56200208     sphere::hit(ray const&, interval, hit_record&) const [5]
+[26]     2.0    0.25    0.00 56200208         interval::surrounds(double) const [26]
+-----------------------------------------------
+                0.00    0.00       1/79564623     write_color(std::ostream&, vec3 const&) [59]
+                0.00    0.00       2/79564623     __static_initialization_and_destruction_0() [66]
+                0.08    0.00 26521540/79564623     camera::ray_color(ray const&, hittable const&, int) [3]
+                0.15    0.00 53043080/79564623     hittable_list::hit(ray const&, interval, hit_record&) const [4]
+[27]     1.8    0.23    0.00 79564623         interval::interval(double, double) [27]
+-----------------------------------------------
+                0.08    0.00 9000000/27083449     camera::get_ray(int, int) [9]
+                0.15    0.00 18083449/27083449     camera::ray_color(ray const&, hittable const&, int) [3]
+[28]     1.8    0.23    0.00 27083449         ray::ray(vec3 const&, vec3 const&) [28]
+-----------------------------------------------
+                0.21    0.00 53043080/53043080     hittable_list::hit(ray const&, interval, hit_record&) const [4]
+[29]     1.6    0.21    0.00 53043080         __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::operator++() [29]
+-----------------------------------------------
+                0.12    0.08 26521540/26521540     hittable_list::hit(ray const&, interval, hit_record&) const [4]
+[30]     1.6    0.12    0.08 26521540         std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::begin() const [30]
+                0.08    0.00 26521540/53043080     __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::__normal_iterator(std::shared_ptr<hittable> const* const&) [34]
+-----------------------------------------------
+                0.12    0.08 53043080/53043080     std::__shared_ptr_access<hittable, (__gnu_cxx::_Lock_policy)2, false, false>::operator->() const [23]
+[31]     1.6    0.12    0.08 53043080         std::__shared_ptr_access<hittable, (__gnu_cxx::_Lock_policy)2, false, false>::_M_get() const [31]
+                0.08    0.00 53043080/53043080     std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::get() const [38]
+-----------------------------------------------
+                0.07    0.10 26521540/26521540     unit_vector(vec3 const&) [10]
+[32]     1.4    0.07    0.10 26521540         vec3::length() const [32]
+                0.10    0.00 26521540/26521540     vec3::length_squared() const [37]
+-----------------------------------------------
+                0.09    0.08 26521540/26521540     hittable_list::hit(ray const&, interval, hit_record&) const [4]
+[33]     1.3    0.09    0.08 26521540         std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::end() const [33]
+                0.08    0.00 26521540/53043080     __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::__normal_iterator(std::shared_ptr<hittable> const* const&) [34]
+-----------------------------------------------
+                0.08    0.00 26521540/53043080     std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::begin() const [30]
+                0.08    0.00 26521540/53043080     std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::end() const [33]
+[34]     1.3    0.17    0.00 53043080         __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::__normal_iterator(std::shared_ptr<hittable> const* const&) [34]
+-----------------------------------------------
+                0.15    0.00 53043080/53043080     hittable_list::hit(ray const&, interval, hit_record&) const [4]
+[35]     1.2    0.15    0.00 53043080         __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::operator*() const [35]
+-----------------------------------------------
+                0.14    0.00 53043080/53043080     sphere::hit(ray const&, interval, hit_record&) const [5]
+[36]     1.1    0.14    0.00 53043080         ray::origin() const [36]
+-----------------------------------------------
+                0.10    0.00 26521540/26521540     vec3::length() const [32]
+[37]     0.8    0.10    0.00 26521540         vec3::length_squared() const [37]
+-----------------------------------------------
+                0.08    0.00 53043080/53043080     std::__shared_ptr_access<hittable, (__gnu_cxx::_Lock_policy)2, false, false>::_M_get() const [31]
+[38]     0.6    0.08    0.00 53043080         std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::get() const [38]
+-----------------------------------------------
+                0.03    0.04 10000311/10000311     hit_record::set_face_normal(ray const&, vec3 const&) [20]
+[39]     0.6    0.03    0.04 10000311         vec3::operator-() const [39]
+                0.04    0.00 10000311/313714126     vec3::vec3(double, double, double) [6]
+-----------------------------------------------
+                0.06    0.00 9000000/9000000     camera::render(hittable const&) [2]
+[40]     0.5    0.06    0.00 9000000         vec3::operator+=(vec3 const&) [40]
+-----------------------------------------------
+                0.00    0.00   90000/17528091     write_color(std::ostream&, vec3 const&) [59]
+                0.02    0.00 8438091/17528091     camera::ray_color(ray const&, hittable const&, int) [3]
+                0.02    0.00 9000000/17528091     camera::get_ray(int, int) [9]
+[41]     0.4    0.04    0.00 17528091         vec3::y() const [41]
+-----------------------------------------------
+                0.00    0.00       1/14          std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, double>(vec3&&, double&&) [48]
+                0.00    0.00       1/14          std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, int>(vec3&&, int&&) [49]
+                0.00    0.00       1/14          std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [51]
+                0.00    0.00       1/14          std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [50]
+                0.00    0.00       1/14          std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [52]
+                0.00    0.00       1/14          std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [53]
+                0.00    0.00       1/14          std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [55]
+                0.00    0.00       1/14          std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [54]
+                0.00    0.00       1/14          void std::_Construct<sphere, vec3, double>(sphere*, vec3&&, double&&) [62]
+                0.00    0.00       1/14          void std::_Construct<sphere, vec3, int>(sphere*, vec3&&, int&&) [63]
+                0.01    0.00       2/14          std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, double>(std::allocator<void>, vec3&&, double&&) [57]
+                0.01    0.00       2/14          std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, int>(std::allocator<void>, vec3&&, int&&) [58]
+[42]     0.3    0.04    0.00      14         vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&) [42]
+-----------------------------------------------
+                0.04    0.00   90000/90000       camera::render(hittable const&) [2]
+[43]     0.3    0.04    0.00   90000         vec3::operator*=(double) [43]
+-----------------------------------------------
+                0.00    0.00   90000/9090000     write_color(std::ostream&, vec3 const&) [59]
+                0.03    0.00 9000000/9090000     camera::get_ray(int, int) [9]
+[44]     0.2    0.03    0.00 9090000         vec3::x() const [44]
+-----------------------------------------------
+                0.00    0.02       2/2           main [1]
+[45]     0.2    0.00    0.02       2         hittable_list::add(std::shared_ptr<hittable>) [45]
+                0.00    0.02       2/2           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::push_back(std::shared_ptr<hittable> const&) [47]
+-----------------------------------------------
+                0.02    0.00       2/2           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::push_back(std::shared_ptr<hittable> const&) [47]
+[46]     0.2    0.02    0.00       2         void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&) [46]
+                0.00    0.00       6/6           std::shared_ptr<hittable> const& std::forward<std::shared_ptr<hittable> const&>(std::remove_reference<std::shared_ptr<hittable> const&>::type&) [84]
+                0.00    0.00       4/5           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_get_Tp_allocator() [86]
+                0.00    0.00       4/8           __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::base() const [75]
+                0.00    0.00       4/4           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_S_relocate(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [99]
+                0.00    0.00       2/2           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_check_len(unsigned long, char const*) const [112]
+                0.00    0.00       2/2           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::begin() [137]
+                0.00    0.00       2/2           __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::difference_type __gnu_cxx::operator-<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&, __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&) [111]
+                0.00    0.00       2/2           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_allocate(unsigned long) [116]
+                0.00    0.00       2/7           operator new(unsigned long, void*) [80]
+                0.00    0.00       2/2           std::shared_ptr<hittable>::shared_ptr(std::shared_ptr<hittable> const&) [115]
+                0.00    0.00       2/3           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_deallocate(std::shared_ptr<hittable>*, unsigned long) [106]
+-----------------------------------------------
+                0.00    0.02       2/2           hittable_list::add(std::shared_ptr<hittable>) [45]
+[47]     0.2    0.00    0.02       2         std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::push_back(std::shared_ptr<hittable> const&) [47]
+                0.02    0.00       2/2           void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&) [46]
+                0.00    0.00       2/2           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::end() [136]
+-----------------------------------------------
+                0.00    0.02       1/1           main [1]
+[48]     0.2    0.00    0.02       1         std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, double>(vec3&&, double&&) [48]
+                0.00    0.02       1/1           std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [51]
+                0.00    0.00       1/14          vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&) [42]
+                0.00    0.00       1/7           double&& std::forward<double>(std::remove_reference<double>::type&) [78]
+-----------------------------------------------
+                0.00    0.02       1/1           main [1]
+[49]     0.2    0.00    0.02       1         std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, int>(vec3&&, int&&) [49]
+                0.00    0.02       1/1           std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [50]
+                0.00    0.00       1/14          vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&) [42]
+                0.00    0.00       1/7           int&& std::forward<int>(std::remove_reference<int>::type&) [79]
+-----------------------------------------------
+                0.00    0.02       1/1           std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, int>(vec3&&, int&&) [49]
+[50]     0.1    0.00    0.02       1         std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [50]
+                0.00    0.01       1/1           std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [53]
+                0.00    0.00       1/14          vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&) [42]
+                0.00    0.00       1/7           int&& std::forward<int>(std::remove_reference<int>::type&) [79]
+-----------------------------------------------
+                0.00    0.02       1/1           std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, double>(vec3&&, double&&) [48]
+[51]     0.1    0.00    0.02       1         std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [51]
+                0.00    0.01       1/1           std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [52]
+                0.00    0.00       1/14          vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&) [42]
+                0.00    0.00       1/7           double&& std::forward<double>(std::remove_reference<double>::type&) [78]
+-----------------------------------------------
+                0.00    0.01       1/1           std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [51]
+[52]     0.1    0.00    0.01       1         std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [52]
+                0.00    0.01       1/1           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [55]
+                0.00    0.00       1/14          vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&) [42]
+                0.00    0.00       1/7           double&& std::forward<double>(std::remove_reference<double>::type&) [78]
+                0.00    0.00       1/2           std::enable_if<!std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__has_esft_base<sphere, void>::value, void>::type std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::_M_enable_shared_from_this_with<sphere, sphere>(sphere*) [117]
+-----------------------------------------------
+                0.00    0.01       1/1           std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [50]
+[53]     0.1    0.00    0.01       1         std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [53]
+                0.00    0.01       1/1           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [54]
+                0.00    0.00       1/14          vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&) [42]
+                0.00    0.00       1/7           int&& std::forward<int>(std::remove_reference<int>::type&) [79]
+                0.00    0.00       1/2           std::enable_if<!std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__has_esft_base<sphere, void>::value, void>::type std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::_M_enable_shared_from_this_with<sphere, sphere>(sphere*) [117]
+-----------------------------------------------
+                0.00    0.01       1/1           std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [53]
+[54]     0.1    0.00    0.01       1         std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [54]
+                0.00    0.01       1/1           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, int>(std::allocator<void>, vec3&&, int&&) [58]
+                0.00    0.00       1/14          vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&) [42]
+                0.00    0.00       1/2           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::get() [123]
+                0.00    0.00       1/2           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&) [139]
+                0.00    0.00       1/7           operator new(unsigned long, void*) [80]
+                0.00    0.00       1/7           int&& std::forward<int>(std::remove_reference<int>::type&) [79]
+                0.00    0.00       1/2           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::operator=(decltype(nullptr)) [124]
+                0.00    0.00       1/6           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_ptr() [83]
+                0.00    0.00       1/4           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::~__allocated_ptr() [94]
+                0.00    0.00       1/4           std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::~__new_allocator() [95]
+-----------------------------------------------
+                0.00    0.01       1/1           std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [52]
+[55]     0.1    0.00    0.01       1         std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [55]
+                0.00    0.01       1/1           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, double>(std::allocator<void>, vec3&&, double&&) [57]
+                0.00    0.00       1/14          vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&) [42]
+                0.00    0.00       1/2           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::get() [123]
+                0.00    0.00       1/2           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&) [139]
+                0.00    0.00       1/7           operator new(unsigned long, void*) [80]
+                0.00    0.00       1/7           double&& std::forward<double>(std::remove_reference<double>::type&) [78]
+                0.00    0.00       1/2           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::operator=(decltype(nullptr)) [124]
+                0.00    0.00       1/6           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_ptr() [83]
+                0.00    0.00       1/4           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::~__allocated_ptr() [94]
+                0.00    0.00       1/4           std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::~__new_allocator() [95]
+-----------------------------------------------
+                                                 <spontaneous>
+[56]     0.1    0.01    0.00                 frame_dummy [56]
+-----------------------------------------------
+                0.00    0.01       1/1           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [55]
+[57]     0.1    0.00    0.01       1         std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, double>(std::allocator<void>, vec3&&, double&&) [57]
+                0.01    0.00       2/14          vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&) [42]
+                0.00    0.00       1/1           void std::_Construct<sphere, vec3, double>(sphere*, vec3&&, double&&) [62]
+                0.00    0.00       2/7           double&& std::forward<double>(std::remove_reference<double>::type&) [78]
+                0.00    0.00       1/2           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_Sp_counted_base() [130]
+                0.00    0.00       1/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Impl::_Impl(std::allocator<void>) [134]
+                0.00    0.00       1/6           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_ptr() [83]
+-----------------------------------------------
+                0.00    0.01       1/1           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [54]
+[58]     0.1    0.00    0.01       1         std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, int>(std::allocator<void>, vec3&&, int&&) [58]
+                0.01    0.00       2/14          vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&) [42]
+                0.00    0.00       1/1           void std::_Construct<sphere, vec3, int>(sphere*, vec3&&, int&&) [63]
+                0.00    0.00       2/7           int&& std::forward<int>(std::remove_reference<int>::type&) [79]
+                0.00    0.00       1/2           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_Sp_counted_base() [130]
+                0.00    0.00       1/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Impl::_Impl(std::allocator<void>) [134]
+                0.00    0.00       1/6           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_ptr() [83]
+-----------------------------------------------
+                0.00    0.01   90000/90000       camera::render(hittable const&) [2]
+[59]     0.0    0.00    0.01   90000         write_color(std::ostream&, vec3 const&) [59]
+                0.01    0.00   90000/90000       vec3::z() const [60]
+                0.00    0.00   90000/9090000     vec3::x() const [44]
+                0.00    0.00   90000/17528091     vec3::y() const [41]
+                0.00    0.00       1/79564623     interval::interval(double, double) [27]
+                0.00    0.00  270000/270000      interval::clamp(double) const [73]
+-----------------------------------------------
+                0.01    0.00   90000/90000       write_color(std::ostream&, vec3 const&) [59]
+[60]     0.0    0.01    0.00   90000         vec3::z() const [60]
+-----------------------------------------------
+                0.01    0.00       1/1           main [1]
+[61]     0.0    0.01    0.00       1         hittable_list::~hittable_list() [61]
+                0.00    0.00       1/3           hittable::~hittable() [105]
+                0.00    0.00       1/1           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::~vector() [158]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, double>(std::allocator<void>, vec3&&, double&&) [57]
+[62]     0.0    0.00    0.00       1         void std::_Construct<sphere, vec3, double>(sphere*, vec3&&, double&&) [62]
+                0.00    0.00       1/14          vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&) [42]
+                0.00    0.00       1/7           operator new(unsigned long, void*) [80]
+                0.00    0.00       1/7           double&& std::forward<double>(std::remove_reference<double>::type&) [78]
+                0.00    0.00       1/2           sphere::sphere(vec3 const&, double) [109]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, int>(std::allocator<void>, vec3&&, int&&) [58]
+[63]     0.0    0.00    0.00       1         void std::_Construct<sphere, vec3, int>(sphere*, vec3&&, int&&) [63]
+                0.00    0.00       1/14          vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&) [42]
+                0.00    0.00       1/7           operator new(unsigned long, void*) [80]
+                0.00    0.00       1/7           int&& std::forward<int>(std::remove_reference<int>::type&) [79]
+                0.00    0.00       1/2           sphere::sphere(vec3 const&, double) [109]
+-----------------------------------------------
+                0.00    0.00       1/1           camera::render(hittable const&) [2]
+[64]     0.0    0.00    0.00       1         camera::initialize() [64]
+                0.00    0.00       4/44808161     operator/(vec3 const&, double) [13]
+                0.00    0.00       3/80329700     operator-(vec3 const&, vec3 const&) [14]
+                0.00    0.00       2/62808159     operator+(vec3 const&, vec3 const&) [12]
+                0.00    0.00       4/313714126     vec3::vec3(double, double, double) [6]
+                0.00    0.00       1/116054410     operator*(double, vec3 const&) [8]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[65]     0.0    0.00    0.00       1         camera::camera() [65]
+                0.00    0.00       4/106176164     vec3::vec3() [18]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN6camera9ray_colorERK3rayRK8hittablei [67]
+[66]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0() [66]
+                0.00    0.00       2/79564623     interval::interval(double, double) [27]
+-----------------------------------------------
+                                                 <spontaneous>
+[67]     0.0    0.00    0.00                 _GLOBAL__sub_I__ZN6camera9ray_colorERK3rayRK8hittablei [67]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0() [66]
+-----------------------------------------------
+                0.00    0.00  270000/270000      write_color(std::ostream&, vec3 const&) [59]
+[73]     0.0    0.00    0.00  270000         interval::clamp(double) const [73]
+-----------------------------------------------
+                0.00    0.00      12/12          std::shared_ptr<hittable>* std::__relocate_a<std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [101]
+[74]     0.0    0.00    0.00      12         std::shared_ptr<hittable>* std::__niter_base<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*) [74]
+-----------------------------------------------
+                0.00    0.00       4/8           void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&) [46]
+                0.00    0.00       4/8           __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::difference_type __gnu_cxx::operator-<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&, __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&) [111]
+[75]     0.0    0.00    0.00       8         __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::base() const [75]
+-----------------------------------------------
+                0.00    0.00       8/8           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_check_len(unsigned long, char const*) const [112]
+[76]     0.0    0.00    0.00       8         std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::size() const [76]
+-----------------------------------------------
+                0.00    0.00       2/7           std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() [118]
+                0.00    0.00       5/7           std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() [87]
+[77]     0.0    0.00    0.00       7         std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() [77]
+                0.00    0.00       4/4           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() [96]
+-----------------------------------------------
+                0.00    0.00       1/7           std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, double>(vec3&&, double&&) [48]
+                0.00    0.00       1/7           std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [51]
+                0.00    0.00       1/7           std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [52]
+                0.00    0.00       1/7           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [55]
+                0.00    0.00       1/7           void std::_Construct<sphere, vec3, double>(sphere*, vec3&&, double&&) [62]
+                0.00    0.00       2/7           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, double>(std::allocator<void>, vec3&&, double&&) [57]
+[78]     0.0    0.00    0.00       7         double&& std::forward<double>(std::remove_reference<double>::type&) [78]
+-----------------------------------------------
+                0.00    0.00       1/7           std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, int>(vec3&&, int&&) [49]
+                0.00    0.00       1/7           std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [50]
+                0.00    0.00       1/7           std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [53]
+                0.00    0.00       1/7           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [54]
+                0.00    0.00       1/7           void std::_Construct<sphere, vec3, int>(sphere*, vec3&&, int&&) [63]
+                0.00    0.00       2/7           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, int>(std::allocator<void>, vec3&&, int&&) [58]
+[79]     0.0    0.00    0.00       7         int&& std::forward<int>(std::remove_reference<int>::type&) [79]
+-----------------------------------------------
+                0.00    0.00       1/7           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [55]
+                0.00    0.00       1/7           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [54]
+                0.00    0.00       1/7           void std::__relocate_object_a<std::shared_ptr<hittable>, std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [159]
+                0.00    0.00       1/7           void std::_Construct<sphere, vec3, double>(sphere*, vec3&&, double&&) [62]
+                0.00    0.00       1/7           void std::_Construct<sphere, vec3, int>(sphere*, vec3&&, int&&) [63]
+                0.00    0.00       2/7           void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&) [46]
+[80]     0.0    0.00    0.00       7         operator new(unsigned long, void*) [80]
+-----------------------------------------------
+                0.00    0.00       6/6           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_ptr() [83]
+[81]     0.0    0.00    0.00       6         __gnu_cxx::__aligned_buffer<sphere>::_M_ptr() [81]
+                0.00    0.00       6/6           __gnu_cxx::__aligned_buffer<sphere>::_M_addr() [82]
+-----------------------------------------------
+                0.00    0.00       6/6           __gnu_cxx::__aligned_buffer<sphere>::_M_ptr() [81]
+[82]     0.0    0.00    0.00       6         __gnu_cxx::__aligned_buffer<sphere>::_M_addr() [82]
+-----------------------------------------------
+                0.00    0.00       1/6           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [55]
+                0.00    0.00       1/6           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [54]
+                0.00    0.00       1/6           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, double>(std::allocator<void>, vec3&&, double&&) [57]
+                0.00    0.00       1/6           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, int>(std::allocator<void>, vec3&&, int&&) [58]
+                0.00    0.00       2/6           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() [133]
+[83]     0.0    0.00    0.00       6         std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_ptr() [83]
+                0.00    0.00       6/6           __gnu_cxx::__aligned_buffer<sphere>::_M_ptr() [81]
+-----------------------------------------------
+                0.00    0.00       6/6           void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&) [46]
+[84]     0.0    0.00    0.00       6         std::shared_ptr<hittable> const& std::forward<std::shared_ptr<hittable> const&>(std::remove_reference<std::shared_ptr<hittable> const&>::type&) [84]
+-----------------------------------------------
+                0.00    0.00       1/5           void std::__relocate_object_a<std::shared_ptr<hittable>, std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [159]
+                0.00    0.00       2/5           main [1]
+                0.00    0.00       2/5           void std::_Destroy<std::shared_ptr<hittable> >(std::shared_ptr<hittable>*) [145]
+[85]     0.0    0.00    0.00       5         std::shared_ptr<hittable>::~shared_ptr() [85]
+                0.00    0.00       5/5           std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() [87]
+-----------------------------------------------
+                0.00    0.00       1/5           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::~vector() [158]
+                0.00    0.00       4/5           void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&) [46]
+[86]     0.0    0.00    0.00       5         std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_get_Tp_allocator() [86]
+-----------------------------------------------
+                0.00    0.00       5/5           std::shared_ptr<hittable>::~shared_ptr() [85]
+[87]     0.0    0.00    0.00       5         std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() [87]
+                0.00    0.00       5/7           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() [77]
+-----------------------------------------------
+                0.00    0.00       1/5           void std::__relocate_object_a<std::shared_ptr<hittable>, std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [159]
+                0.00    0.00       2/5           void std::_Destroy_aux<false>::__destroy<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*) [149]
+                0.00    0.00       2/5           std::shared_ptr<hittable>* std::__relocate_a_1<std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [102]
+[88]     0.0    0.00    0.00       5         std::shared_ptr<hittable>* std::__addressof<std::shared_ptr<hittable> >(std::shared_ptr<hittable>&) [88]
+-----------------------------------------------
+                0.00    0.00       2/4           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::end() [136]
+                0.00    0.00       2/4           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::begin() [137]
+[89]     0.0    0.00    0.00       4         __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::__normal_iterator(std::shared_ptr<hittable>* const&) [89]
+-----------------------------------------------
+                0.00    0.00       4/4           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::max_size() const [91]
+[90]     0.0    0.00    0.00       4         std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_get_Tp_allocator() const [90]
+-----------------------------------------------
+                0.00    0.00       4/4           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_check_len(unsigned long, char const*) const [112]
+[91]     0.0    0.00    0.00       4         std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::max_size() const [91]
+                0.00    0.00       4/4           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_S_max_size(std::allocator<std::shared_ptr<hittable> > const&) [98]
+                0.00    0.00       4/4           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_get_Tp_allocator() const [90]
+-----------------------------------------------
+                0.00    0.00       4/4           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Impl::_M_alloc() [97]
+[92]     0.0    0.00    0.00       4         std::_Sp_ebo_helper<0, std::allocator<void>, true>::_S_get(std::_Sp_ebo_helper<0, std::allocator<void>, true>&) [92]
+-----------------------------------------------
+                0.00    0.00       2/4           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&) [139]
+                0.00    0.00       2/4           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() [132]
+[93]     0.0    0.00    0.00       4         std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&, std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*) [93]
+                0.00    0.00       4/4           std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >* std::__addressof<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&) [100]
+-----------------------------------------------
+                0.00    0.00       1/4           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [55]
+                0.00    0.00       1/4           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [54]
+                0.00    0.00       2/4           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() [132]
+[94]     0.0    0.00    0.00       4         std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::~__allocated_ptr() [94]
+                0.00    0.00       2/2           std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::deallocate(std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*, unsigned long) [127]
+-----------------------------------------------
+                0.00    0.00       1/4           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [55]
+                0.00    0.00       1/4           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [54]
+                0.00    0.00       2/4           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() [132]
+[95]     0.0    0.00    0.00       4         std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::~__new_allocator() [95]
+-----------------------------------------------
+                0.00    0.00       4/4           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() [77]
+[96]     0.0    0.00    0.00       4         std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() [96]
+                0.00    0.00       2/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() [133]
+                0.00    0.00       2/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() [132]
+-----------------------------------------------
+                0.00    0.00       2/4           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() [133]
+                0.00    0.00       2/4           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() [132]
+[97]     0.0    0.00    0.00       4         std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Impl::_M_alloc() [97]
+                0.00    0.00       4/4           std::_Sp_ebo_helper<0, std::allocator<void>, true>::_S_get(std::_Sp_ebo_helper<0, std::allocator<void>, true>&) [92]
+-----------------------------------------------
+                0.00    0.00       4/4           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::max_size() const [91]
+[98]     0.0    0.00    0.00       4         std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_S_max_size(std::allocator<std::shared_ptr<hittable> > const&) [98]
+                0.00    0.00       4/4           unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [103]
+-----------------------------------------------
+                0.00    0.00       4/4           void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&) [46]
+[99]     0.0    0.00    0.00       4         std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_S_relocate(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [99]
+                0.00    0.00       4/4           std::shared_ptr<hittable>* std::__relocate_a<std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [101]
+-----------------------------------------------
+                0.00    0.00       4/4           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&, std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*) [93]
+[100]    0.0    0.00    0.00       4         std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >* std::__addressof<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&) [100]
+-----------------------------------------------
+                0.00    0.00       4/4           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_S_relocate(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [99]
+[101]    0.0    0.00    0.00       4         std::shared_ptr<hittable>* std::__relocate_a<std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [101]
+                0.00    0.00      12/12          std::shared_ptr<hittable>* std::__niter_base<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*) [74]
+                0.00    0.00       4/4           std::shared_ptr<hittable>* std::__relocate_a_1<std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [102]
+-----------------------------------------------
+                0.00    0.00       4/4           std::shared_ptr<hittable>* std::__relocate_a<std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [101]
+[102]    0.0    0.00    0.00       4         std::shared_ptr<hittable>* std::__relocate_a_1<std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [102]
+                0.00    0.00       2/5           std::shared_ptr<hittable>* std::__addressof<std::shared_ptr<hittable> >(std::shared_ptr<hittable>&) [88]
+                0.00    0.00       1/1           void std::__relocate_object_a<std::shared_ptr<hittable>, std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [159]
+-----------------------------------------------
+                0.00    0.00       4/4           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_S_max_size(std::allocator<std::shared_ptr<hittable> > const&) [98]
+[103]    0.0    0.00    0.00       4         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [103]
+-----------------------------------------------
+                0.00    0.00       1/3           hittable_list::hittable_list() [147]
+                0.00    0.00       2/3           sphere::sphere(vec3 const&, double) [109]
+[104]    0.0    0.00    0.00       3         hittable::hittable() [104]
+-----------------------------------------------
+                0.00    0.00       1/3           hittable_list::~hittable_list() [61]
+                0.00    0.00       2/3           sphere::~sphere() [110]
+[105]    0.0    0.00    0.00       3         hittable::~hittable() [105]
+-----------------------------------------------
+                0.00    0.00       1/3           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::~_Vector_base() [154]
+                0.00    0.00       2/3           void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&) [46]
+[106]    0.0    0.00    0.00       3         std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_deallocate(std::shared_ptr<hittable>*, unsigned long) [106]
+                0.00    0.00       2/2           std::__new_allocator<std::shared_ptr<hittable> >::deallocate(std::shared_ptr<hittable>*, unsigned long) [125]
+-----------------------------------------------
+                0.00    0.00       1/3           std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>&&) [155]
+                0.00    0.00       2/3           std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<sphere, void>(std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>&&) [120]
+[107]    0.0    0.00    0.00       3         std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_swap(std::__shared_count<(__gnu_cxx::_Lock_policy)2>&) [107]
+-----------------------------------------------
+                0.00    0.00       1/3           std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>&&) [155]
+                0.00    0.00       2/3           std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<sphere, void>(std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>&&) [120]
+[108]    0.0    0.00    0.00       3         std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count() [108]
+-----------------------------------------------
+                0.00    0.00       1/2           void std::_Construct<sphere, vec3, double>(sphere*, vec3&&, double&&) [62]
+                0.00    0.00       1/2           void std::_Construct<sphere, vec3, int>(sphere*, vec3&&, int&&) [63]
+[109]    0.0    0.00    0.00       2         sphere::sphere(vec3 const&, double) [109]
+                0.00    0.00       2/3           hittable::hittable() [104]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::_Destroy<sphere>(sphere*) [144]
+[110]    0.0    0.00    0.00       2         sphere::~sphere() [110]
+                0.00    0.00       2/3           hittable::~hittable() [105]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&) [46]
+[111]    0.0    0.00    0.00       2         __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::difference_type __gnu_cxx::operator-<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&, __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&) [111]
+                0.00    0.00       4/8           __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::base() const [75]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&) [46]
+[112]    0.0    0.00    0.00       2         std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_check_len(unsigned long, char const*) const [112]
+                0.00    0.00       8/8           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::size() const [76]
+                0.00    0.00       4/4           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::max_size() const [91]
+                0.00    0.00       2/2           unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [140]
+-----------------------------------------------
+                0.00    0.00       2/2           main [1]
+[113]    0.0    0.00    0.00       2         std::shared_ptr<sphere>::~shared_ptr() [113]
+                0.00    0.00       2/2           std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() [118]
+-----------------------------------------------
+                0.00    0.00       2/2           main [1]
+[114]    0.0    0.00    0.00       2         std::shared_ptr<hittable>::shared_ptr<sphere, void>(std::shared_ptr<sphere>&&) [114]
+                0.00    0.00       2/2           std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<sphere, void>(std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>&&) [120]
+                0.00    0.00       2/2           std::remove_reference<std::shared_ptr<sphere>&>::type&& std::move<std::shared_ptr<sphere>&>(std::shared_ptr<sphere>&) [141]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&) [46]
+[115]    0.0    0.00    0.00       2         std::shared_ptr<hittable>::shared_ptr(std::shared_ptr<hittable> const&) [115]
+                0.00    0.00       2/2           std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2> const&) [119]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&) [46]
+[116]    0.0    0.00    0.00       2         std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_allocate(unsigned long) [116]
+                0.00    0.00       2/2           std::__new_allocator<std::shared_ptr<hittable> >::allocate(unsigned long, void const*) [126]
+-----------------------------------------------
+                0.00    0.00       1/2           std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [52]
+                0.00    0.00       1/2           std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [53]
+[117]    0.0    0.00    0.00       2         std::enable_if<!std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__has_esft_base<sphere, void>::value, void>::type std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::_M_enable_shared_from_this_with<sphere, sphere>(sphere*) [117]
+-----------------------------------------------
+                0.00    0.00       2/2           std::shared_ptr<sphere>::~shared_ptr() [113]
+[118]    0.0    0.00    0.00       2         std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() [118]
+                0.00    0.00       2/7           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() [77]
+-----------------------------------------------
+                0.00    0.00       2/2           std::shared_ptr<hittable>::shared_ptr(std::shared_ptr<hittable> const&) [115]
+[119]    0.0    0.00    0.00       2         std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2> const&) [119]
+                0.00    0.00       2/2           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&) [122]
+-----------------------------------------------
+                0.00    0.00       2/2           std::shared_ptr<hittable>::shared_ptr<sphere, void>(std::shared_ptr<sphere>&&) [114]
+[120]    0.0    0.00    0.00       2         std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<sphere, void>(std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>&&) [120]
+                0.00    0.00       2/3           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count() [108]
+                0.00    0.00       2/3           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_swap(std::__shared_count<(__gnu_cxx::_Lock_policy)2>&) [107]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Impl::_Impl(std::allocator<void>) [134]
+[121]    0.0    0.00    0.00       2         std::_Sp_ebo_helper<0, std::allocator<void>, true>::_Sp_ebo_helper(std::allocator<void> const&) [121]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2> const&) [119]
+[122]    0.0    0.00    0.00       2         std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&) [122]
+                0.00    0.00       2/2           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_add_ref_copy() [129]
+-----------------------------------------------
+                0.00    0.00       1/2           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [55]
+                0.00    0.00       1/2           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [54]
+[123]    0.0    0.00    0.00       2         std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::get() [123]
+                0.00    0.00       2/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>* std::__to_address<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >(std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*) [138]
+-----------------------------------------------
+                0.00    0.00       1/2           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [55]
+                0.00    0.00       1/2           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [54]
+[124]    0.0    0.00    0.00       2         std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::operator=(decltype(nullptr)) [124]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_deallocate(std::shared_ptr<hittable>*, unsigned long) [106]
+[125]    0.0    0.00    0.00       2         std::__new_allocator<std::shared_ptr<hittable> >::deallocate(std::shared_ptr<hittable>*, unsigned long) [125]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_allocate(unsigned long) [116]
+[126]    0.0    0.00    0.00       2         std::__new_allocator<std::shared_ptr<hittable> >::allocate(unsigned long, void const*) [126]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::~__allocated_ptr() [94]
+[127]    0.0    0.00    0.00       2         std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::deallocate(std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*, unsigned long) [127]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&) [139]
+[128]    0.0    0.00    0.00       2         std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::allocate(unsigned long, void const*) [128]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&) [122]
+[129]    0.0    0.00    0.00       2         std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_add_ref_copy() [129]
+-----------------------------------------------
+                0.00    0.00       1/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, double>(std::allocator<void>, vec3&&, double&&) [57]
+                0.00    0.00       1/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, int>(std::allocator<void>, vec3&&, int&&) [58]
+[130]    0.0    0.00    0.00       2         std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_Sp_counted_base() [130]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace() [135]
+[131]    0.0    0.00    0.00       2         std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::~_Sp_counted_base() [131]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() [96]
+[132]    0.0    0.00    0.00       2         std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() [132]
+                0.00    0.00       2/4           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Impl::_M_alloc() [97]
+                0.00    0.00       2/4           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&, std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*) [93]
+                0.00    0.00       2/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace() [135]
+                0.00    0.00       2/4           std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::~__new_allocator() [95]
+                0.00    0.00       2/4           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::~__allocated_ptr() [94]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release() [96]
+[133]    0.0    0.00    0.00       2         std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() [133]
+                0.00    0.00       2/6           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_ptr() [83]
+                0.00    0.00       2/4           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Impl::_M_alloc() [97]
+                0.00    0.00       2/2           void std::_Destroy<sphere>(sphere*) [144]
+-----------------------------------------------
+                0.00    0.00       1/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, double>(std::allocator<void>, vec3&&, double&&) [57]
+                0.00    0.00       1/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, int>(std::allocator<void>, vec3&&, int&&) [58]
+[134]    0.0    0.00    0.00       2         std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Impl::_Impl(std::allocator<void>) [134]
+                0.00    0.00       2/2           std::_Sp_ebo_helper<0, std::allocator<void>, true>::_Sp_ebo_helper(std::allocator<void> const&) [121]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy() [132]
+[135]    0.0    0.00    0.00       2         std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace() [135]
+                0.00    0.00       2/2           std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::~_Sp_counted_base() [131]
+-----------------------------------------------
+                0.00    0.00       2/2           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::push_back(std::shared_ptr<hittable> const&) [47]
+[136]    0.0    0.00    0.00       2         std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::end() [136]
+                0.00    0.00       2/4           __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::__normal_iterator(std::shared_ptr<hittable>* const&) [89]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&) [46]
+[137]    0.0    0.00    0.00       2         std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::begin() [137]
+                0.00    0.00       2/4           __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::__normal_iterator(std::shared_ptr<hittable>* const&) [89]
+-----------------------------------------------
+                0.00    0.00       2/2           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::get() [123]
+[138]    0.0    0.00    0.00       2         std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>* std::__to_address<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >(std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*) [138]
+-----------------------------------------------
+                0.00    0.00       1/2           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [55]
+                0.00    0.00       1/2           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [54]
+[139]    0.0    0.00    0.00       2         std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&) [139]
+                0.00    0.00       2/2           std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::allocate(unsigned long, void const*) [128]
+                0.00    0.00       2/4           std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&, std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*) [93]
+-----------------------------------------------
+                0.00    0.00       2/2           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_check_len(unsigned long, char const*) const [112]
+[140]    0.0    0.00    0.00       2         unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [140]
+-----------------------------------------------
+                0.00    0.00       2/2           std::shared_ptr<hittable>::shared_ptr<sphere, void>(std::shared_ptr<sphere>&&) [114]
+[141]    0.0    0.00    0.00       2         std::remove_reference<std::shared_ptr<sphere>&>::type&& std::move<std::shared_ptr<sphere>&>(std::shared_ptr<sphere>&) [141]
+-----------------------------------------------
+                0.00    0.00       1/2           void std::__relocate_object_a<std::shared_ptr<hittable>, std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [159]
+                0.00    0.00       1/2           std::shared_ptr<hittable>::shared_ptr(std::shared_ptr<hittable>&&) [148]
+[142]    0.0    0.00    0.00       2         std::remove_reference<std::shared_ptr<hittable>&>::type&& std::move<std::shared_ptr<hittable>&>(std::shared_ptr<hittable>&) [142]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::__relocate_object_a<std::shared_ptr<hittable>, std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [159]
+[143]    0.0    0.00    0.00       2         std::shared_ptr<hittable>&& std::forward<std::shared_ptr<hittable> >(std::remove_reference<std::shared_ptr<hittable> >::type&) [143]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose() [133]
+[144]    0.0    0.00    0.00       2         void std::_Destroy<sphere>(sphere*) [144]
+                0.00    0.00       2/2           sphere::~sphere() [110]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::_Destroy_aux<false>::__destroy<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*) [149]
+[145]    0.0    0.00    0.00       2         void std::_Destroy<std::shared_ptr<hittable> >(std::shared_ptr<hittable>*) [145]
+                0.00    0.00       2/5           std::shared_ptr<hittable>::~shared_ptr() [85]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_main [161]
+[146]    0.0    0.00    0.00       1         __static_initialization_and_destruction_0() [146]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[147]    0.0    0.00    0.00       1         hittable_list::hittable_list() [147]
+                0.00    0.00       1/3           hittable::hittable() [104]
+                0.00    0.00       1/1           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::vector() [157]
+-----------------------------------------------
+                0.00    0.00       1/1           void std::__relocate_object_a<std::shared_ptr<hittable>, std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [159]
+[148]    0.0    0.00    0.00       1         std::shared_ptr<hittable>::shared_ptr(std::shared_ptr<hittable>&&) [148]
+                0.00    0.00       1/1           std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>&&) [155]
+                0.00    0.00       1/2           std::remove_reference<std::shared_ptr<hittable>&>::type&& std::move<std::shared_ptr<hittable>&>(std::shared_ptr<hittable>&) [142]
+-----------------------------------------------
+                0.00    0.00       1/1           void std::_Destroy<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*) [160]
+[149]    0.0    0.00    0.00       1         void std::_Destroy_aux<false>::__destroy<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*) [149]
+                0.00    0.00       2/2           void std::_Destroy<std::shared_ptr<hittable> >(std::shared_ptr<hittable>*) [145]
+                0.00    0.00       2/5           std::shared_ptr<hittable>* std::__addressof<std::shared_ptr<hittable> >(std::shared_ptr<hittable>&) [88]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_base() [153]
+[150]    0.0    0.00    0.00       1         std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl::_Vector_impl() [150]
+                0.00    0.00       1/1           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl_data::_Vector_impl_data() [152]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::~_Vector_base() [154]
+[151]    0.0    0.00    0.00       1         std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl::~_Vector_impl() [151]
+                0.00    0.00       1/1           std::__new_allocator<std::shared_ptr<hittable> >::~__new_allocator() [156]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl::_Vector_impl() [150]
+[152]    0.0    0.00    0.00       1         std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl_data::_Vector_impl_data() [152]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::vector() [157]
+[153]    0.0    0.00    0.00       1         std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_base() [153]
+                0.00    0.00       1/1           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl::_Vector_impl() [150]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::~vector() [158]
+[154]    0.0    0.00    0.00       1         std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::~_Vector_base() [154]
+                0.00    0.00       1/3           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_deallocate(std::shared_ptr<hittable>*, unsigned long) [106]
+                0.00    0.00       1/1           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl::~_Vector_impl() [151]
+-----------------------------------------------
+                0.00    0.00       1/1           std::shared_ptr<hittable>::shared_ptr(std::shared_ptr<hittable>&&) [148]
+[155]    0.0    0.00    0.00       1         std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>&&) [155]
+                0.00    0.00       1/3           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count() [108]
+                0.00    0.00       1/3           std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_swap(std::__shared_count<(__gnu_cxx::_Lock_policy)2>&) [107]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl::~_Vector_impl() [151]
+[156]    0.0    0.00    0.00       1         std::__new_allocator<std::shared_ptr<hittable> >::~__new_allocator() [156]
+-----------------------------------------------
+                0.00    0.00       1/1           hittable_list::hittable_list() [147]
+[157]    0.0    0.00    0.00       1         std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::vector() [157]
+                0.00    0.00       1/1           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_base() [153]
+-----------------------------------------------
+                0.00    0.00       1/1           hittable_list::~hittable_list() [61]
+[158]    0.0    0.00    0.00       1         std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::~vector() [158]
+                0.00    0.00       1/5           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_get_Tp_allocator() [86]
+                0.00    0.00       1/1           void std::_Destroy<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*) [160]
+                0.00    0.00       1/1           std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::~_Vector_base() [154]
+-----------------------------------------------
+                0.00    0.00       1/1           std::shared_ptr<hittable>* std::__relocate_a_1<std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [102]
+[159]    0.0    0.00    0.00       1         void std::__relocate_object_a<std::shared_ptr<hittable>, std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&) [159]
+                0.00    0.00       2/2           std::shared_ptr<hittable>&& std::forward<std::shared_ptr<hittable> >(std::remove_reference<std::shared_ptr<hittable> >::type&) [143]
+                0.00    0.00       1/2           std::remove_reference<std::shared_ptr<hittable>&>::type&& std::move<std::shared_ptr<hittable>&>(std::shared_ptr<hittable>&) [142]
+                0.00    0.00       1/7           operator new(unsigned long, void*) [80]
+                0.00    0.00       1/1           std::shared_ptr<hittable>::shared_ptr(std::shared_ptr<hittable>&&) [148]
+                0.00    0.00       1/5           std::shared_ptr<hittable>* std::__addressof<std::shared_ptr<hittable> >(std::shared_ptr<hittable>&) [88]
+                0.00    0.00       1/5           std::shared_ptr<hittable>::~shared_ptr() [85]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::~vector() [158]
+[160]    0.0    0.00    0.00       1         void std::_Destroy<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*) [160]
+                0.00    0.00       1/1           void std::_Destroy_aux<false>::__destroy<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*) [149]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [10] unit_vector(vec3 const&) [38] std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::get() const [130] std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_Sp_counted_base()
+  [59] write_color(std::ostream&, vec3 const&) [31] std::__shared_ptr_access<hittable, (__gnu_cxx::_Lock_policy)2, false, false>::_M_get() const [131] std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::~_Sp_counted_base()
+  [25] random_double()        [23] std::__shared_ptr_access<hittable, (__gnu_cxx::_Lock_policy)2, false, false>::operator->() const [132] std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
+   [7] random_unit_vector()  [112] std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_check_len(unsigned long, char const*) const [133] std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+  [11] dot(vec3 const&, vec3 const&) [33] std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::end() const [97] std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Impl::_M_alloc()
+  [66] __static_initialization_and_destruction_0() [76] std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::size() const [134] std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Impl::_Impl(std::allocator<void>)
+ [146] __static_initialization_and_destruction_0() [30] std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::begin() const [83] std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_ptr()
+  [20] hit_record::set_face_normal(ray const&, vec3 const&) [91] std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::max_size() const [57] std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, double>(std::allocator<void>, vec3&&, double&&)
+  [16] hit_record::hit_record() [50] std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [58] std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_Sp_counted_ptr_inplace<vec3, int>(std::allocator<void>, vec3&&, int&&)
+  [45] hittable_list::add(std::shared_ptr<hittable>) [51] std::shared_ptr<sphere>::shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [135] std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace()
+ [147] hittable_list::hittable_list() [113] std::shared_ptr<sphere>::~shared_ptr() [98] std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_S_max_size(std::allocator<std::shared_ptr<hittable> > const&)
+  [61] hittable_list::~hittable_list() [148] std::shared_ptr<hittable>::shared_ptr(std::shared_ptr<hittable>&&) [99] std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_S_relocate(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&)
+  [28] ray::ray(vec3 const&, vec3 const&) [114] std::shared_ptr<hittable>::shared_ptr<sphere, void>(std::shared_ptr<sphere>&&) [46] void std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_realloc_insert<std::shared_ptr<hittable> const&>(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >, std::shared_ptr<hittable> const&)
+  [21] vec3::random()        [115] std::shared_ptr<hittable>::shared_ptr(std::shared_ptr<hittable> const&) [136] std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::end()
+   [6] vec3::vec3(double, double, double) [85] std::shared_ptr<hittable>::~shared_ptr() [137] std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::begin()
+  [18] vec3::vec3()          [149] void std::_Destroy_aux<false>::__destroy<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*) [47] std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::push_back(std::shared_ptr<hittable> const&)
+  [43] vec3::operator*=(double) [116] std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_allocate(unsigned long) [157] std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::vector()
+  [40] vec3::operator+=(vec3 const&) [150] std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl::_Vector_impl() [158] std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::~vector()
+  [64] camera::initialize()  [151] std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl::~_Vector_impl() [62] void std::_Construct<sphere, vec3, double>(sphere*, vec3&&, double&&)
+   [2] camera::render(hittable const&) [106] std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_deallocate(std::shared_ptr<hittable>*, unsigned long) [63] void std::_Construct<sphere, vec3, int>(sphere*, vec3&&, int&&)
+   [9] camera::get_ray(int, int) [152] std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_impl_data::_Vector_impl_data() [100] std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >* std::__addressof<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&)
+   [3] camera::ray_color(ray const&, hittable const&, int) [86] std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_get_Tp_allocator() [88] std::shared_ptr<hittable>* std::__addressof<std::shared_ptr<hittable> >(std::shared_ptr<hittable>&)
+  [65] camera::camera()      [153] std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_Vector_base() [48] std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, double>(vec3&&, double&&)
+ [109] sphere::sphere(vec3 const&, double) [154] std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::~_Vector_base() [49] std::shared_ptr<std::enable_if<!std::is_array<sphere>::value, sphere>::type> std::make_shared<sphere, vec3, int>(vec3&&, int&&)
+ [110] sphere::~sphere()     [117] std::enable_if<!std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__has_esft_base<sphere, void>::value, void>::type std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::_M_enable_shared_from_this_with<sphere, sphere>(sphere*) [74] std::shared_ptr<hittable>* std::__niter_base<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*)
+ [104] hittable::hittable()   [52] std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, double>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [101] std::shared_ptr<hittable>* std::__relocate_a<std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&)
+ [105] hittable::~hittable()  [53] std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<std::allocator<void>, vec3, int>(std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [138] std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>* std::__to_address<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >(std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*)
+  [27] interval::interval(double, double) [118] std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() [102] std::shared_ptr<hittable>* std::__relocate_a_1<std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&)
+  [81] __gnu_cxx::__aligned_buffer<sphere>::_M_ptr() [119] std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2> const&) [139] std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&)
+  [82] __gnu_cxx::__aligned_buffer<sphere>::_M_addr() [120] std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr<sphere, void>(std::__shared_ptr<sphere, (__gnu_cxx::_Lock_policy)2>&&) [159] void std::__relocate_object_a<std::shared_ptr<hittable>, std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*, std::allocator<std::shared_ptr<hittable> >&)
+  [34] __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::__normal_iterator(std::shared_ptr<hittable> const* const&) [155] std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>&&) [140] unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  [29] __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::operator++() [87] std::__shared_ptr<hittable, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr() [103] unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  [89] __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::__normal_iterator(std::shared_ptr<hittable>* const&) [92] std::_Sp_ebo_helper<0, std::allocator<void>, true>::_S_get(std::_Sp_ebo_helper<0, std::allocator<void>, true>&) [141] std::remove_reference<std::shared_ptr<sphere>&>::type&& std::move<std::shared_ptr<sphere>&>(std::shared_ptr<sphere>&)
+ [111] __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::difference_type __gnu_cxx::operator-<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&, __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&) [121] std::_Sp_ebo_helper<0, std::allocator<void>, true>::_Sp_ebo_helper(std::allocator<void> const&) [142] std::remove_reference<std::shared_ptr<hittable>&>::type&& std::move<std::shared_ptr<hittable>&>(std::shared_ptr<hittable>&)
+  [15] bool __gnu_cxx::operator!=<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >(__gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&, __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > > const&) [107] std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_swap(std::__shared_count<(__gnu_cxx::_Lock_policy)2>&) [42] vec3&& std::forward<vec3>(std::remove_reference<vec3>::type&)
+   [4] hittable_list::hit(ray const&, interval, hit_record&) const [122] std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&) [84] std::shared_ptr<hittable> const& std::forward<std::shared_ptr<hittable> const&>(std::remove_reference<std::shared_ptr<hittable> const&>::type&)
+  [17] ray::at(float) const   [54] std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, int>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, int&&) [143] std::shared_ptr<hittable>&& std::forward<std::shared_ptr<hittable> >(std::remove_reference<std::shared_ptr<hittable> >::type&)
+  [36] ray::origin() const   [108] std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count() [78] double&& std::forward<double>(std::remove_reference<double>::type&)
+  [19] ray::direction() const [55] std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count<sphere, std::allocator<void>, vec3, double>(sphere*&, std::_Sp_alloc_shared_tag<std::allocator<void> >, vec3&&, double&&) [79] int&& std::forward<int>(std::remove_reference<int>::type&)
+  [37] vec3::length_squared() const [77] std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count() [144] void std::_Destroy<sphere>(sphere*)
+  [44] vec3::x() const       [123] std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::get() [160] void std::_Destroy<std::shared_ptr<hittable>*>(std::shared_ptr<hittable>*, std::shared_ptr<hittable>*)
+  [41] vec3::y() const        [93] std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >&, std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*) [145] void std::_Destroy<std::shared_ptr<hittable> >(std::shared_ptr<hittable>*)
+  [60] vec3::z() const        [94] std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::~__allocated_ptr() [13] operator/(vec3 const&, double)
+  [32] vec3::length() const  [124] std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> > >::operator=(decltype(nullptr)) [14] operator-(vec3 const&, vec3 const&)
+  [39] vec3::operator-() const [125] std::__new_allocator<std::shared_ptr<hittable> >::deallocate(std::shared_ptr<hittable>*, unsigned long) [8] operator*(double, vec3 const&)
+   [5] sphere::hit(ray const&, interval, hit_record&) const [126] std::__new_allocator<std::shared_ptr<hittable> >::allocate(unsigned long, void const*) [80] operator new(unsigned long, void*)
+  [73] interval::clamp(double) const [156] std::__new_allocator<std::shared_ptr<hittable> >::~__new_allocator() [12] operator+(vec3 const&, vec3 const&)
+  [26] interval::surrounds(double) const [127] std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::deallocate(std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>*, unsigned long) [24] _init
+  [22] __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::base() const [128] std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::allocate(unsigned long, void const*) [56] frame_dummy
+  [35] __gnu_cxx::__normal_iterator<std::shared_ptr<hittable> const*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::operator*() const [95] std::__new_allocator<std::_Sp_counted_ptr_inplace<sphere, std::allocator<void>, (__gnu_cxx::_Lock_policy)2> >::~__new_allocator() [1] main
+  [75] __gnu_cxx::__normal_iterator<std::shared_ptr<hittable>*, std::vector<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > > >::base() const [96] std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
+  [90] std::_Vector_base<std::shared_ptr<hittable>, std::allocator<std::shared_ptr<hittable> > >::_M_get_Tp_allocator() const [129] std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_add_ref_copy()
