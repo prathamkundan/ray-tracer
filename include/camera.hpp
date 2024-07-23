@@ -10,8 +10,15 @@ class camera {
     double focal_length = 1.0;
     double viewport_height = 2.0;
     int samples_per_pixel = 20;
-    float pixel_samples_scale = 1.0 / samples_per_pixel;
     int max_depth = 10;
+
+    double fov = 90.0f;
+    point3 lookfrom = point3(0, 0, 0);
+    point3 lookat = point3(0, 0, -1);
+    vec3 vup = vec3(0, 1, 0);
+
+    double defocus_angle = 0;
+    double focus_distance = 10;
 
     camera(){};
     camera(double aspect_ratio, int image_width, double viewport_height,
@@ -32,8 +39,13 @@ class camera {
     point3 pixel00_loc;  // Location of pixel 0, 0
     vec3 pixel_delta_u;  // Offset to pixel to the right
     vec3 pixel_delta_v;
+    float pixel_samples_scale;
+    vec3 u, v, w;
+    vec3 defocus_disk_u;
+    vec3 defocus_disk_v;
 
     void initialize();
     color3 ray_color(const ray &r, const hittable &world, int max_depth);
-    ray get_ray(int i, int j);
+    ray get_ray(int i, int j) const;
+    point3 defocus_disk_sample() const;
 };
