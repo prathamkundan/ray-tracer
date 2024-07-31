@@ -20,9 +20,9 @@ class camera {
     double defocus_angle = 0;
     double focus_distance = 10;
 
-    camera(){};
-    camera(double aspect_ratio, int image_width, double viewport_height,
-           double focal_length, int samples_per_pixel)
+    HD camera() {};
+    HD camera(double aspect_ratio, int image_width, double viewport_height,
+              double focal_length, int samples_per_pixel)
         : aspect_ratio(aspect_ratio),
           image_width(image_width),
           viewport_height(viewport_height),
@@ -31,9 +31,8 @@ class camera {
         pixel_samples_scale = 1.0 / samples_per_pixel;
     };
 
-    void render(const hittable &world);
+    HD void render(const hittable &world);
 
-   private:
     int image_height;    // Rendered image height
     point3 center;       // Camera center
     point3 pixel00_loc;  // Location of pixel 0, 0
@@ -44,8 +43,9 @@ class camera {
     vec3 defocus_disk_u;
     vec3 defocus_disk_v;
 
-    void initialize();
-    color3 ray_color(const ray &r, const hittable &world, int max_depth);
-    ray get_ray(int i, int j) const;
-    point3 defocus_disk_sample() const;
+    HD void initialize();
+    HD color3 ray_color(const ray &r, const hittable &world, int max_depth);
+    HD ray get_ray(int i, int j) const;
+    HD point3 defocus_disk_sample() const;
+    vec3 sample_square() const;
 };

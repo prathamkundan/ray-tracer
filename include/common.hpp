@@ -3,7 +3,6 @@
 #include <cmath>
 #include <cstdlib>
 #include <memory>
-#include <utility>
 #include <vector>
 
 #include "utils.hpp"
@@ -18,3 +17,4 @@ using std::make_shared;
 using std::shared_ptr;
 using std::sqrt;
 using std::vector;
+

@@ -4,7 +4,7 @@
 #include <cmath>
 #include <iostream>
 
-#include <vec3.hpp>
+#include "vec3.hpp"
 #include "interval.hpp"
 
 using color3 = vec3;

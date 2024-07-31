@@ -1,17 +1,18 @@
 #pragma once
 
-class material;
+class cu_material;
 
-#include "common.hpp"
-#include "vec3.hpp"
+#include "../common.hpp"
 
-class hit_record {
+class cu_hit_record {
    public:
     point3 p;
     vec3 normal;
-    shared_ptr<material> mat;
+    cu_material* mat;
     double t;
     bool front_face;
+
+    HD cu_hit_record() {};
 
     /* Sets the hit record normal vector.
      * NOTE: the parameter `outward_normal` is assumed to have unit length.
@@ -22,9 +23,10 @@ class hit_record {
     }
 };
 
-class hittable {
+class cu_hittable {
    public:
-    HD virtual bool hit(const ray& r, interval ray_t,
-                        hit_record& rec) const {return 0;};
-};
+    __device__ virtual bool hit(const ray& r, interval ray_t,
+                                cu_hit_record& rec) const = 0;
 
+    virtual cu_hittable* clone() const = 0;
+};
