@@ -31,8 +31,7 @@ cu_hittable** Allocator::allocate_sphere(const point3 center, double radius,
     vec3* d_center;
     err = cudaMallocManaged(&d_center, sizeof(vec3));
     if (err != cudaSuccess) {
-        std::cerr << "Could not allocate vec3::cudaMalloc failed"
-                  << std::endl;
+        std::cerr << "Could not allocate vec3::cudaMalloc failed" << std::endl;
         std::cerr << "CUDA error: " << cudaGetErrorString(err) << std::endl;
         return nullptr;
     }
@@ -54,59 +53,46 @@ cu_hittable** Allocator::allocate_sphere(const point3 center, double radius,
 __global__ void cu_allocate_list(cu_hittable*** d_objects, int d_num_objects,
                                  cu_hittable** hittable_list_ptr) {
     cu_hittable_list* new_ptr = new cu_hittable_list();
-    // printf("num hittables: %d\n", d_num_objects);
     new_ptr->set_objects(d_objects, d_num_objects);
-    // printf("Address at const world ptr: %p\n", new_ptr);
     *hittable_list_ptr = new_ptr;
-    // printf("Address at const world ptr ptr: %p\n", hittable_list_ptr);
-    // printf("Address at const world ptr: %p\n", *hittable_list_ptr);
-    // auto r = ray(vec3(0,0,0), vec3(0, 0, -1));
-    // auto h = cu_hit_record();
-    // (*hittable_list_ptr)->hit(r, interval(0.001, inf), h);
 }
 
-__global__ void render(cu_hittable** d_world, cu_camera* d_cam, color3* d_output) {
+__global__ void render(cu_hittable** d_world, cu_camera* d_cam,
+                       color3* d_output) {
     d_cam->initRandState();
-    
+
     int width = d_cam->image_width;
     int height = d_cam->image_height;
 
-    // printf("World ptr ptr: %p\n", d_world);
-    // printf("World ptr: %p\n", *d_world);
-    // printf("%d X %d\n", width, height);
-
-    auto r = d_cam->get_ray(0, 0);
-    auto h = cu_hit_record();
-    (*d_world)->hit(r, interval(0.001, inf), h);
-
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
-            auto ray = d_cam->get_ray(i, j);
-            // printf("Ray: %f, %f, %f\n", ray.direction().x(), ray.direction().y(),
+            ray ray = d_cam->get_ray(i, j);
+            // printf("Ray: %f, %f, %f\n", ray.direction().x(),
+            // ray.direction().y(),
             //        ray.direction().z());
             printf("%d, %d\n", i, j);
-            auto op = d_cam->ray_color(ray, *d_world, d_cam->max_depth);
+            color3 op = d_cam->ray_color_iter(ray, *d_world, d_cam->max_depth);
             d_output[i * width + j] = op;
         }
     }
 }
 
-
-__global__ void render_parallel(cu_hittable** d_world, cu_camera* d_cam, color3* d_output) {
+__global__ void render_parallel(cu_hittable** d_world, cu_camera* d_cam,
+                                color3* d_output) {
     int x = blockIdx.x * blockDim.x + threadIdx.x;
     int y = blockIdx.y * blockDim.y + threadIdx.y;
 
     int width = d_cam->image_width;
     int height = d_cam->image_height;
 
-    printf("DIM: %d, %d\n", x, y);
+    // printf("DIM: %d, %d\n", x, y);
 
     if (x >= height || y >= width) return;
 
     color3 op = color3(0, 0, 0);
-    for (int i=0; i<d_cam->samples_per_pixel; i++) {
-        auto ray = d_cam->get_ray(x, y);
-        op += d_cam->ray_color(ray, *d_world, d_cam->max_depth);
+    for (int i = 0; i < d_cam->samples_per_pixel; i++) {
+        auto ray = d_cam->get_ray(y, x);
+        op += d_cam->ray_color_iter(ray, *d_world, d_cam->max_depth);
     }
 
     op *= d_cam->pixel_samples_scale;
@@ -132,16 +118,18 @@ void Allocator::test(cu_camera cam, color3* output) {
         std::clog << "Could not allocate camera on the GPU" << std::endl;
     }
 
-    // dim3 threads_per_block(16, 16); // 16x16 threads per block
-    // dim3 number_of_blocks(ceil(cam.image_height/16.0), ceil(cam.image_width/16.0)); 
-    //
-    // render_parallel<<<number_of_blocks, threads_per_block>>>(world, d_cam, d_output);
-    render<<<1, 1>>>(world, d_cam, d_output);
+    dim3 threads_per_block(16, 16);  // 16x16 threads per block
+    dim3 number_of_blocks(ceil(cam.image_height / 16.0),
+                          ceil(cam.image_width / 16.0));
+
+    render_parallel<<<number_of_blocks, threads_per_block>>>(world, d_cam,
+                                                             d_output);
+    // render<<<1, 1>>>(world, d_cam, d_output);
     err = cudaDeviceSynchronize();
 
     if (err != cudaSuccess) {
         std::cerr << "CUDA error: " << cudaGetErrorString(err) << std::endl;
-        return; 
+        return;
     }
 
     for (int i = 0; i < cam.image_height * cam.image_width; i++) {
@@ -157,7 +145,8 @@ cu_hittable** Allocator::allocate_list() {
     cu_hittable** d_hittable_list;
     auto err = cudaMallocManaged(&d_hittable_list, sizeof(cu_hittable*));
     if (err != cudaSuccess) {
-        std::cerr << "Could not allocate hittable_list ::cudaMalloc failed" << std::endl;
+        std::cerr << "Could not allocate hittable_list ::cudaMalloc failed"
+                  << std::endl;
         std::cerr << "CUDA error: " << cudaGetErrorString(err) << std::endl;
         return nullptr;
     }

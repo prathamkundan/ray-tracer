@@ -10,7 +10,7 @@
 
 #define HD __host__ __device__
 
-inline const double inf = INFINITY;
+inline const double inf = (double) INFINITY;
 inline const double pi = 3.1415926535897932385;
 
 HD inline double degrees_to_radians(double degrees) {

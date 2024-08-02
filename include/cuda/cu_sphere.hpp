@@ -14,7 +14,7 @@ class cu_sphere : public cu_hittable {
 
     __device__ bool hit(const ray& r, interval ray_t,
                 cu_hit_record& rec) const override {
-        printf("->sphere hit\n");
+        // printf("->sphere hit\n");
         vec3 oc = center - r.origin();
         auto a = r.direction().length_squared();
         auto h = dot(r.direction(), oc);
@@ -22,14 +22,14 @@ class cu_sphere : public cu_hittable {
 
         auto discriminant = h * h - a * c;
         if (discriminant < 0) {
-            printf("skipped\n");
+            // printf("skipped\n");
             return false;
         }
 
         auto sqrtd = sqrtf(discriminant);
 
         // Find the nearest root that lies in the acceptable range.
-        printf("root finding\n");
+        // printf("root finding\n");
         auto root = (h - sqrtd) / a;
         if (!ray_t.surrounds(root)) {
             root = (h + sqrtd) / a;
@@ -39,7 +39,7 @@ class cu_sphere : public cu_hittable {
         rec.t = root;
         rec.p = r.at(rec.t);
 
-        printf("Setting normal\n");
+        // printf("Setting normal\n");
         vec3 outward_normal = (rec.p - center) / radius;
         rec.set_face_normal(r, outward_normal);
         rec.mat = mat;

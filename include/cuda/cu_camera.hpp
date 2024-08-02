@@ -25,9 +25,9 @@ class cu_camera {
     double defocus_angle = 0.0;
     double focus_distance = 10;
 
-    cu_camera() {};
+    cu_camera(){};
     cu_camera(double aspect_ratio, int image_width, double viewport_height,
-                 double focal_length, int samples_per_pixel)
+              double focal_length, int samples_per_pixel)
         : aspect_ratio(aspect_ratio),
           image_width(image_width),
           viewport_height(viewport_height),
@@ -36,7 +36,7 @@ class cu_camera {
         pixel_samples_scale = 1.0 / samples_per_pixel;
     };
 
-    HD void render(const cu_hittable &world);
+    HD void render(const cu_hittable& world);
 
     int image_height;    // Rendered image height
     point3 center;       // Camera center
@@ -89,12 +89,32 @@ class cu_camera {
         defocus_disk_v = v * defocus_radius;
     };
 
-    __device__ void initRandState() {
-        curand_init(42, 0, 0, &rand_state);
+    __device__ void initRandState() { curand_init(42, 0, 0, &rand_state); }
+
+    __device__ color3 ray_color_iter(const ray& r, const cu_hittable* world,
+                                     int depth) {
+        color3 output(1, 1, 1);
+        ray scattered;
+        ray current = r;
+        cu_hit_record rec;
+        color3 attenuation(0, 0, 0);
+
+        for (int i = 0; i < depth; i++) {
+            if (world->hit(current, interval(0.001, inf), rec)) {
+                rec.mat->scatter(current, rec, attenuation, scattered, &rand_state);
+                output = output * attenuation;
+                current = scattered;
+            } else {
+                return output * (color3(0.5, 0.7, 1.0));
+            }
+        }
+
+        return color3(0, 0, 0);
     }
 
-    __device__ color3 ray_color(const ray &r, const cu_hittable *world, int depth) {
-        printf("ray_color depth: %d\n", depth);
+    __device__ color3 ray_color(const ray& r, const cu_hittable* world,
+                                int depth) {
+        // printf("ray_color depth: %d\n", depth);
         if (depth <= 0) return color3(0, 0, 0);
 
         cu_hit_record rec;
@@ -120,7 +140,8 @@ class cu_camera {
         auto pixel_sample = pixel00_loc + ((i + offset.x()) * pixel_delta_u) +
                             ((j + offset.y()) * pixel_delta_v);
 
-        // auto ray_origin = defocus_angle <= 0 ? center : defocus_disk_sample();
+        // auto ray_origin = defocus_angle <= 0 ? center :
+        // defocus_disk_sample();
         auto ray_origin = center;
         auto ray_direction = pixel_sample - ray_origin;
 
@@ -136,10 +157,9 @@ class cu_camera {
     __device__ vec3 sample_square() {
         // Returns the vector to a random point in the [-.5,-.5]-[+.5,+.5] unit
         // square.
-        return vec3(curand_uniform_double(&rand_state) - 0.5, curand_uniform_double(&rand_state) - 0.5, 0);
+        return vec3(curand_uniform_double(&rand_state) - 0.5,
+                    curand_uniform_double(&rand_state) - 0.5, 0);
     }
 
-    cu_camera* clone() {
-        return new cu_camera(*this);
-    }
+    cu_camera* clone() { return new cu_camera(*this); }
 };

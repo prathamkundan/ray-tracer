@@ -9,7 +9,7 @@ project(raytracer
 
 # set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CUDA_ARCHITECTURES 61)
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE None)
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     message(STATUS "Debug build")

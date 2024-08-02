@@ -17,19 +17,18 @@ class cu_hittable_list : public cu_hittable {
 
     __device__ bool hit(const ray &r, interval ray_t,
                 cu_hit_record &rec) const override {
-        printf("-> list hit\n");
+        // printf("-> list hit\n");
         cu_hit_record temp_rec;
-        printf("hi\n");
         bool hit_anything = false;
 
         double closest_so_far = ray_t.max;
 
         // printf("pre-loop\n");
         for (int i = 0; i < num_objects; i++) {
-            printf("Object: %d\n", i);
+            // printf("Object: %d\n", i);
             cu_hittable **object = objects[i];
 
-            printf("obj-ref\n");
+            // printf("obj-ref\n");
             if ((*object)->hit(r, interval(ray_t.min, closest_so_far),
                                temp_rec)) {
                 hit_anything = true;
